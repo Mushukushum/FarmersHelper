@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="583.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="news.NewsItemPaneController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="175.0" stroke="#182a53" strokeType="INSIDE" width="583.0" />
+      <Hyperlink fx:id="hyperlink" alignment="TOP_LEFT" layoutX="5.0" layoutY="10.0" onMouseClicked="#hyperlinkClicked" prefHeight="62.0" prefWidth="573.0" style="-fx-text-fill: #102a59;" text="Hyperlink" textAlignment="JUSTIFY" wrapText="true">
+         <font>
+            <Font name="Constantia" size="18.0" />
+         </font>
+      </Hyperlink>
+      <Label fx:id="pubDate" alignment="CENTER_RIGHT" layoutX="343.0" layoutY="72.0" prefHeight="17.0" prefWidth="235.0" text="PubDate" textAlignment="RIGHT" textFill="#ffffff66">
+         <font>
+            <Font name="Constantia" size="15.0" />
+         </font></Label>
+      <Label fx:id="description" alignment="TOP_LEFT" layoutX="10.0" layoutY="100.0" prefHeight="75.0" prefWidth="563.0" text="Description іаПвавіп івфпівафвіа фівафіва лв ф віафідлаф фвідаложфівал фівдлафлджіва фвалфлд вілоаівл" textAlignment="JUSTIFY" wrapText="true">
+         <font>
+            <Font name="Constantia" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

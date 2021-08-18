@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shop.ProductsWindowController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1080.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_CENTER">
+         <image>
+            <Image url="@../resources/0416fendt1.png" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+      </ImageView>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000099" height="511.0" layoutX="209.0" layoutY="209.0" stroke="WHITE" strokeType="INSIDE" width="871.0" />
+            <ScrollPane id="scroll_pane" fx:id="scrollPane" layoutX="209.0" layoutY="209.0" prefHeight="511.0" prefWidth="871.0" stylesheets="@../resources/shopStyle.css">
+               <content>
+                  <VBox fx:id="vBox" prefHeight="443.0" prefWidth="572.0" />
+               </content>
+            </ScrollPane>
+            <Group layoutY="209.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000099" height="511.0" stroke="WHITE" strokeType="INSIDE" width="209.0" />
+                  <TextField fx:id="searchField" layoutX="25.0" layoutY="12.0" promptText="Пошук...">
+                     <font>
+                        <Font name="Constantia" size="12.0" />
+                     </font></TextField>
+                  <Label layoutX="6.0" layoutY="59.0" stylesheets="@../resources/shopStyle.css" text="Сортування:" textFill="WHITE">
+                     <font>
+                        <Font name="Constantia" size="16.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="TOP_RIGHT" layoutX="72.0" layoutY="59.0" prefHeight="71.0" prefWidth="132.0">
+                     <children>
+                        <Button id="sort_button" mnemonicParsing="false" onMouseClicked="#titleSortButtonPressed" stylesheets="@../resources/shopStyle.css" text="за назвою (А-Я)">
+                           <font>
+                              <Font name="Constantia" size="12.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="sort_button" mnemonicParsing="false" onMouseClicked="#highPriceSortButtonPressed" stylesheets="@../resources/shopStyle.css" text="спочатку дорожчі">
+                           <font>
+                              <Font name="Constantia" size="12.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="sort_button" mnemonicParsing="false" onMouseClicked="#lowPriceSortButtonPressed" stylesheets="@../resources/shopStyle.css" text="спочатку дешевші">
+                           <font>
+                              <Font name="Constantia" size="12.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Label fx:id="sortTime" alignment="TOP_RIGHT" layoutX="14.0" layoutY="465.0" prefHeight="15.0" prefWidth="189.0" stylesheets="@../resources/shopStyle.css" textFill="WHITE">
+                     <font>
+                        <Font name="Constantia" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Group>
+            <Label fx:id="lotsCounter" alignment="TOP_RIGHT" layoutX="14.0" layoutY="691.0" prefHeight="15.0" prefWidth="189.0" stylesheets="@../resources/shopStyle.css" text="Кількість найменувань: " textFill="WHITE">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font>
+            </Label>
+            <Group>
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000099" height="210.0" stroke="WHITE" strokeType="INSIDE" width="1080.0" />
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="210.0" prefWidth="1080.0" stylesheets="@../resources/shopStyle.css">
+                     <children>
+                        <Label fx:id="titleText" alignment="CENTER_RIGHT" prefHeight="71.0" prefWidth="1080.0" text="Title" textFill="WHITE">
+                           <font>
+                              <Font name="Constantia" size="51.0" />
+                           </font>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="descriptionText" alignment="TOP_LEFT" prefHeight="138.0" prefWidth="1080.0" text="Sample text calendar.sample text calendar.sample text calendar.sample text calendar.sample text calendar.sample text calendar.sample text calendar.sample text calendar.sample text calendar.sample text calendar.sample text calendar.sample text calendar.sample text calendar.sample text calendar.sample text calendar.sample text" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Constantia" size="19.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="20.0" right="20.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </Group>
+         </children>
+      </AnchorPane>
+      <Label fx:id="loadingText" stylesheets="@../resources/shopStyle.css" text="Loading...." textFill="WHITE">
+         <font>
+            <Font name="Constantia" size="36.0" />
+         </font>
+         <StackPane.margin>
+            <Insets left="220.0" top="180.0" />
+         </StackPane.margin>
+      </Label>
+   </children>
+</StackPane>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="rootPane" prefHeight="440.0" prefWidth="459.0" stylesheets="@materialButtonStyle.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calendar.sample.ListRulesController">
+    <children>
+        <VBox prefHeight="440.0" prefWidth="459.0">
+            <children>
+                <HBox id="header" prefHeight="35.0" prefWidth="340.0">
+                    <children>
+                        <Label fx:id="topLabel" prefHeight="25.0" prefWidth="419.0" text="Керування записами">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="10.0" top="5.0" />
+                            </HBox.margin>
+                            <graphic>
+                                <ImageView fitHeight="18.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@/calendar/sample/drag_icon.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Label>
+                        <Label onMouseClicked="#exit" prefHeight="37.0" prefWidth="39.0">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@/calendar/sample/exit_icon.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Label>
+                    </children>
+                </HBox>
+                <Label prefHeight="34.0" prefWidth="471.0" text="Ваші записи:">
+                    <VBox.margin>
+                        <Insets left="10.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+                <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="eventCol" prefWidth="200.0" text="Опис події" />
+                        <TableColumn fx:id="termCol" minWidth="0.0" prefWidth="110.0" text="Пріоритет" />
+                        <TableColumn fx:id="daysCol" prefWidth="128.0" text="Днів на виконання" />
+                    </columns>
+                    <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                    </VBox.margin>
+                    <stylesheets>
+                        <URL value="@/calendar/sample/tableStyle.css" />
+                        <URL value="@/calendar/sample/scrollbarStyle.css" />
+                    </stylesheets>
+                </TableView>
+<!--                <HBox alignment="CENTER" layoutX="10.0" layoutY="339.0" prefHeight="30.0" prefWidth="459.0">-->
+<!--                    <VBox.margin>-->
+<!--                        <Insets top="10.0" />-->
+<!--                    </VBox.margin>-->
+<!--                    <children>-->
+<!--&lt;!&ndash;                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="509.0" text="Для обраного запису:" textAlignment="CENTER">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <font>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <Font size="13.0" />&ndash;&gt;-->
+<!--&lt;!&ndash;                            </font>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </Label>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </children>&ndash;&gt;-->
+<!--                </HBox>-->
+<!--&lt;!&ndash;                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="459.0">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <children>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <JFXButton onMouseClicked="#editRule" prefWidth="120.0" text="Змінити">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <HBox.margin>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <Insets left="5.0" right="5.0" />&ndash;&gt;-->
+<!--&lt;!&ndash;                            </HBox.margin></JFXButton>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <JFXButton onMouseClicked="#deleteRule" prefHeight="22.0" prefWidth="120.0" text="Вилучити">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <HBox.margin>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <Insets left="5.0" right="5.0" />&ndash;&gt;-->
+<!--&lt;!&ndash;                            </HBox.margin></JFXButton>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </children>&ndash;&gt;-->
+<!--                    <VBox.margin>-->
+<!--                        <Insets top="10.0" />-->
+<!--                    </VBox.margin>-->
+<!--                </HBox>-->
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="289.0" prefHeight="30.0" prefWidth="459.0" />
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="309.0" prefHeight="30.0" prefWidth="459.0">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

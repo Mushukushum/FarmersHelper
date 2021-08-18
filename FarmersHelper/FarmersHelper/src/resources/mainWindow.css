@@ -1,0 +1,60 @@
+#rich_blue {
+    -fx-background-color: 
+        #000000,
+        linear-gradient(#7ebcea, #2f4b8f),
+        linear-gradient(#426ab7, #263e75),
+        linear-gradient(#395cab, #223768);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian , #00000098 , 10,0,2,2);
+}
+
+#rich_blue:hover {
+    -fx-background-color:
+        #000000,
+        radial-gradient(center 50% 50%, radius 100%, #4062b3, #2f4b8f),
+        linear-gradient(#7ebcea, #2f4b8f),
+        linear-gradient(#426ab7, #263e75);
+    -fx-underline: true;
+}
+
+#rich_blue:pressed {
+    -fx-background-insets: 0,10,2,3;
+}
+
+#scroll_pane {
+    -fx-background-color: #00000000;
+    -fx-background: #00000000;
+}
+
+#scroll_pane .scroll-bar {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-color: #10295a;
+    -fx-pref-width: 15;
+    -fx-pref-height: 15;
+}
+
+#scroll_pane .scroll-bar .thumb {
+    -fx-color: #10295a;
+}
+
+#scroll_pane .corner {
+    -fx-background-color: transparent;
+}
+
+#scroll_pane .increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+#scroll_pane .increment-button .increment-arrow, .decrement-button .decrement-arrow {
+    -fx-background-color: #10295a;
+}
+
+.label {
+    -fx-effect: dropshadow(gaussian , #00000066 , 5,0,1,1);
+}

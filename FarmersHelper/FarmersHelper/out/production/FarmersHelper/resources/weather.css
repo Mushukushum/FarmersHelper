@@ -1,0 +1,12 @@
+@font-face {
+    src: url('KorolevCondensedW04Medium.ttf');
+}
+
+.label {
+    -fx-font-family: 'KorolevCondensedW04-Medium';
+    -fx-effect: dropshadow(gaussian , #00000098 , 5,0,2,2);
+}
+
+.image-view {
+    -fx-effect: dropshadow(gaussian , #00000098 , 10,0,2,2);
+}

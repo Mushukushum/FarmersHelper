@@ -1,0 +1,81 @@
+#buy_button {
+    -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color:
+        linear-gradient(from 0% 93% to 0% 100%, #a31313 0%, #901212 100%),
+        #9d2424,
+        #d83a3a,
+        radial-gradient(center 50% 50%, radius 100%, #d83a3a, #c52c2c);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+}
+#buy_button:hover {
+    -fx-background-color:
+        linear-gradient(from 0% 93% to 0% 100%, #a31313 0%, #901212 100%),
+        #9d2424,
+        #d83a3a,
+        radial-gradient(center 50% 50%, radius 100%, #ea4b4b, #c52c2c);
+    -fx-underline: true;
+}
+#buy_button:pressed {
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+
+#sort_button {
+    -fx-background-color:
+        #c3c4c4,
+        linear-gradient(#d6d6d6 50%, white 100%),
+        radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230,230,230,0) 50%);
+
+    -fx-background-insets: 0,1,1;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+}
+
+#sort_button:hover {
+    -fx-background-color:
+        #c3c4c4,
+        linear-gradient(#bdbdbd 50%, white 100%),
+        radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(220,220,220,0) 50%);
+}
+
+#sort_button:pressed {
+    -fx-background-insets: 0,0,0;
+    -fx-effect: none;
+}
+
+.label {
+    -fx-effect: dropshadow(gaussian , rgb(0,0,0) , 5,0,2,2);
+}
+
+#scroll_pane {
+    -fx-background-color: #00000000;
+    -fx-background: #00000000;
+}
+
+#scroll_pane .scroll-bar {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-color: #32010098;
+    -fx-pref-width: 15;
+    -fx-pref-height: 15;
+}
+
+#scroll_pane .scroll-bar .thumb {
+    -fx-color: #ffffff66;
+}
+
+#scroll_pane .corner {
+    -fx-background-color: transparent;
+}
+
+#scroll_pane .increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+#scroll_pane .increment-button .increment-arrow, .decrement-button .decrement-arrow {
+    -fx-background-color: #ffffff66;
+}

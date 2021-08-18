@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="rootPane" prefHeight="249.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calendar.sample.EditEventController">
+    <children>
+        <HBox id="header" prefHeight="35.0" prefWidth="345.0" stylesheets="@materialButtonStyle.css" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label fx:id="topLabel" prefHeight="25.0" prefWidth="313.0" text="Змінити подію">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                    </HBox.margin>
+                    <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/calendar/sample/drag_icon.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Label>
+                <Label onMouseClicked="#exit" prefHeight="37.0" prefWidth="39.0">
+                    <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/calendar/sample/exit_icon.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Label>
+            </children>
+        </HBox>
+        <VBox layoutX="15.0" layoutY="57.0" prefHeight="140.0" prefWidth="320.0" spacing="20.0">
+            <children>
+                <JFXTextField fx:id="subject" focusColor="#4d4d4d" labelFloat="true" prefHeight="40.0" prefWidth="337.0" promptText="Текст">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </JFXTextField>
+                <JFXComboBox fx:id="termSelect" focusColor="#4d4d4d" layoutX="10.0" layoutY="102.0" prefHeight="25.0" prefWidth="166.0" promptText="Пріоритет" />
+                <JFXDatePicker fx:id="date" promptText="Дата" />
+                <HBox prefHeight="100.0" prefWidth="200.0" />
+            </children>
+        </VBox>
+        <HBox layoutX="5.0" layoutY="181.0" prefHeight="41.0" prefWidth="345.0" stylesheets="@materialButtonStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <JFXButton onMouseClicked="#update" prefHeight="40.0" prefWidth="200.0" text="Оновити">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton onMouseClicked="#delete" prefHeight="40.0" prefWidth="200.0" text="Видалити">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </JFXButton>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
